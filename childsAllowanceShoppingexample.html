@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Allowance updater example from MDN Learn - Javascript exercises</title>
+  </head>
+  <body>
+      <h1>Allowance updater code example</h1>
+    <label for="shopping-check">Has the shopping been done? </label>
+    <input type="checkbox" id="shopping-check">
+
+    <p></p>
+    <p>Based on exercise found in <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">MDN Learn's Conditionals documentation</a>
+    </p> 
+    <script>
+      let checkBox = document.querySelector('input');
+      let para = document.querySelector('p');
+      let shoppingDone = false;
+      let childsAllowance = 5;
+
+      checkBox.addEventListener('change',function() {
+        checkBox.disabled = true;
+        shoppingDone = true;
+        updateAllowance();
+      });
+
+      function updateAllowance() {
+        if(shoppingDone === true) {
+          childsAllowance = 10;
+        } else {
+          childsAllowance = 5;
+        }
+
+        para.textContent = 'Child has earned $' + childsAllowance + ' this week.';
+      }
+
+      updateAllowance();
+    </script>
+  </body>
+</html>

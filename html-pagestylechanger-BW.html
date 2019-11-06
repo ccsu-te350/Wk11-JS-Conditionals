@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript exercises - use of ternary operator</title>
+ 
+  
+</head>
+
+<body>
+<div class="container">
+<h1>Use of Ternary operator</h1>
+<p>Based on exercise found in <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">MDN Learn's Conditionals documentation</a>
+</p> 
+
+  <label for="theme">Select theme: </label>
+    <select id="theme">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+     
+    
+    <p>
+    </p>
+    <!-- note, the conditional uses a "ternary operator" which we did not cover in class but is in the MDN Learn documentation-->
+    <script>
+    let themeSelect = document.querySelector('select'); // find the select drop-down so you can use its input
+    let thisHtmlPage = document.querySelector('html'); // grab the main page, top level for getting style parameters like background-color
+    document.body.style.padding = '10px'; // this just ensures that the select box isn't too far into the upper left hand corner
+            
+    function changeTheme(bgColor, textColor) { //bgColor and textColor are the 2 parameters to the changeTheme function 
+        thisHtmlPage.style.backgroundColor = bgColor; // establishes initial parameter, I guess
+        thisHtmlPage.style.color = textColor; // establishes initial parameter, I guess
+    }
+
+    themeSelect.onchange = function() { // adds onchange event listener to the select element that we setup in themeSelect variable
+        ( themeSelect.value === 'black') ? changeTheme('black', 'white') : changeTheme('white', 'black'); // if selected value is black, change the background-color & text color
+    }
+        </script>
+</div>
+</body>
+</html>

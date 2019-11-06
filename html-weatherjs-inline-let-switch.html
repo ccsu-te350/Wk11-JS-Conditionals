@@ -1,0 +1,61 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript exercises - Conditionals - Switch - Weather</title>
+ 
+  
+</head>
+
+<body>
+<div class="container">
+        <h1>Weather chooser - Using Switch </h1>
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+      <option value="">--Make a choice--</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+        
+    
+    <p id="weather" style="background-color: lightyellow; padding 20px; font-weight: bold; font-style: italic; font-size: 1.5em; margin-left: 10px;">
+
+        </p>
+        <p>Based on exercise found in <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">MDN Learn's Conditionals documentation</a>
+        </p> 
+        <p>In this version, the script code is featured in the body of the html page & has been factored for use of "let" for variable setting.</p>
+        <p>This version, more importantly, uses the switch construction in the javascript code, which we did not cover in class, but is in MDN Learn.</p>
+    <script>
+    let select = document.querySelector('select');
+    let para = document.querySelector('p');
+       
+    select.addEventListener('change', setWeather);
+       
+    function setWeather() {
+         let choice = select.value;
+       
+        switch (choice) {
+            case 'sunny':
+                para.textContent = "it is nice and sunny, wear shorts! got ot beach or park!"
+                break;
+            case 'rainy':
+                para.textContent = "rain is falling, don\'t forget your umbrella"
+                break;
+            case 'snowing':
+                para.textContent = "it's snowy & cold - stay inside if you can!"
+                break;
+            case 'overcast':
+                para.textContent = 'it\'s ok, just kinda ugly out there'
+                break;
+            default:
+                para.textContent = '';
+        }
+    }
+        </script>
+</div>
+</body>
+</html>

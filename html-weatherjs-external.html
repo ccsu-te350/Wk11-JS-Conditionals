@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Javascript exercises - Conditionals - If Else If - Weather - External js</title>
+  <!-- use of the defer attribute to script is key to this working because all html elements must load before js can work -->
+  <script src="weather-let.js" defer>
+   </script>
+  
+</head>
+
+<body>
+<div class="container">
+    <h1>Weather chooser - If ... Else if... Else... </h1>
+    <p>Based on exercise found in <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">MDN Learn's Conditionals documentation</a>
+    </p> 
+    <p>In this version, the script code is featured as a separate, external .js file referenced by this html page & has been factored for use of "let" for variable setting.</p>
+    <p><em>Note also that I have used the defer attribute of the script tag to ensure that the whole page and its elements are loaded before the script runs.</em></p>
+    <label for="weather">Select the weather type today: </label>
+    <select id="weather">
+      <option value="">--Make a choice--</option>
+      <option value="sunny">Sunny</option>
+      <option value="rainy">Rainy</option>
+      <option value="snowing">Snowing</option>
+      <option value="overcast">Overcast</option>
+    </select>
+    
+    
+    
+    <p>
+
+    </p>
+    
+</div>
+</body>
+</html>
